@@ -1,1 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Notable&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E4E4E0;
+}
