@@ -4,7 +4,6 @@ class DrinkList extends Component {
   render() {
     const drinks = this.props.drinks;
     const filter = this.props.filter;
-    console.log(drinks);
     const showDrinks = drinks.map((drink) => {
       const alcoholTag = drink.fields["alcohol-tag"]; 
       if (filter === "All") {
