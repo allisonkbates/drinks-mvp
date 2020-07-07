@@ -14,7 +14,7 @@ function Filters() {
           margin: 40px;
         }
         h2 {
-          color: #220E05;
+          color: #200d06;
           font-family: 'Julius Sans One', sans-serif;
           font-size: 18px;
           margin-right: 9px;

@@ -18,7 +18,7 @@ class Index extends Component {
 
 export async function getStaticProps() {
   const apiKey = process.env.API_KEY;
-  const res = await fetch(`https://api.airtable.com/v0/app53cV9D5L6e38bR/Drinks?api_key=${apiKey}`);
+  const res = await fetch(`https://api.airtable.com/v0/app53cV9D5L6e38bR/Drinks?view=V1-UI-View&api_key=${apiKey}`);
   const json = await res.json()
 
   return {

@@ -5,7 +5,7 @@ function Header() {
       <button className="btn-light">Read More</button>
     <style jsx>{`
         .bg-header {
-          background-image: url('/cover-img-2.png');
+          background-image: url('/cover-img.png');
           background-position: center center;
           background-size: cover;
           height: 432px;
