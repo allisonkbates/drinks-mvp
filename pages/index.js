@@ -5,12 +5,26 @@ import DrinkList from '../components/DrinkList';
 import Filters from '../components/Filters';
 
 class Index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filter: 'All'
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event) {
+    this.setState({
+      filter: event.target.value
+    });
+  }
+
   render() {
     return (
       <div> 
         <Header />
-        <Filters />
-        <DrinkList drinks={this.props.drinks}/>
+        <Filters handleClick={this.handleClick}/>
+        <DrinkList drinks={this.props.drinks} filter={this.state.filter}/>
       </div>
     )
   }

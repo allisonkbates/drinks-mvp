@@ -3,9 +3,17 @@ import React, { Component } from 'react';
 class DrinkList extends Component {
   render() {
     const drinks = this.props.drinks;
+    const filter = this.props.filter;
     console.log(drinks);
     const showDrinks = drinks.map((drink) => {
-      return <DrinkCard key={drink.id} drink={drink}/>
+      const alcoholTag = drink.fields["alcohol-tag"]; 
+      if (filter === "All") {
+        return <DrinkCard  key={drink.id} drink={drink} />
+      } else if (filter === alcoholTag) {
+        return <DrinkCard key={drink.id} drink={drink} />
+      } else {
+        return null;
+      }
     });
     return (
       <div>
