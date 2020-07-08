@@ -71,8 +71,8 @@ class DrinkCard extends Component {
         font-size: 14px;
         padding-left: 16px;
         padding-top: 8px;
+        padding-right: 8px;
         margin: 0;
-   
       }
     `}</style>
     </div>
