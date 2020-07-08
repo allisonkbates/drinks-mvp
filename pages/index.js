@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fetch from 'node-fetch';
+import Head from 'next/head'
 import Header from '../components/Header';
 import DrinkList from '../components/DrinkList';
 import Filters from '../components/Filters';
@@ -22,6 +23,10 @@ class Index extends Component {
   render() {
     return (
       <div> 
+        <Head>
+          <title>Drinks MVP</title>
+          <link rel="icon" type="image/svg" sizes="32x32" href="/cocktail.svg"></link>
+        </Head>
         <Header />
         <Filters handleClick={this.handleClick}/>
         <DrinkList drinks={this.props.drinks} filter={this.state.filter}/>

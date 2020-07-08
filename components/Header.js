@@ -31,6 +31,11 @@ function Header() {
           border-radius: 2px;
           text-decoration: none;
         }
+        a:hover {
+          background-color: #220E05;
+          color: #E4E4E0;
+          transition: .4s;
+        }
       `}</style>
     </div>
   )
