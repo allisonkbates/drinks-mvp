@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Header from '../components/Header';
 import DrinkList from '../components/DrinkList';
 import Filters from '../components/Filters';
+import Banner from '../components/Banner';
 
 class Index extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class Index extends Component {
           <title>Drinks MVP</title>
           <link rel="icon" type="image/svg" sizes="32x32" href="/cocktail.svg"></link>
         </Head>
+        <Banner />
         <Header />
         <Filters handleClick={this.handleClick}/>
         <DrinkList drinks={this.props.drinks} filter={this.state.filter}/>
