@@ -4,7 +4,6 @@ class Filters extends Component {
   render () {
     return (
       <div className="filters">
-        <h2>Filter By:</h2>
         <button className="filter-chip" value="Gin" onClick={this.props.handleClick}>Gin</button>
         <button className="filter-chip" value="Whiskey" onClick={this.props.handleClick}>Whiskey</button>
         <button className="filter-chip" value="Vodka" onClick={this.props.handleClick}>Vodka</button>
@@ -16,31 +15,24 @@ class Filters extends Component {
             display: flex;
             flex-direction: row;
             padding-left: 20px;
-            margin: 40px;
-          }
-          h2 {
-            color: #220E05;
-            font-family: 'Julius Sans One', sans-serif;
-            font-size: 18px;
-            margin-right: 9px;
           }
           .filter-chip {
-            background-color: #220E05;
-            color: #E4E4E0;
-            font-family: 'Julius Sans One', sans-serif;
-            font-size: 18px;
-            padding: 10px 20px;
-            margin: 6px;
-            border: none;
-            border-radius: 50px;
-            outline: none;
-            border: 1px solid #220E05;
+            height: 40px;
+            padding: 0px 25px;
+            background-color: #377084;
+            border: 1px solid #377084;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            margin-left: 16px;
+            color: #ffffff;
+            font-family: 'Advent Pro', sans-serif;
           }
 
           .filter-chip:hover {
-            background-color: #E4E4E0;
-            border: 1px solid #220E05;
-            color: #220E05;
+            background-color: #EFF3F4;
+            border: 1px solid #377084;
+            color: #377084;
             transition: 0.4s;
           }
         `}

@@ -4,9 +4,22 @@ import Head from 'next/head';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
 import RecList from '../components/RecList';
-import GinList from '../components/GinList';
+import FilterList from '../components/FilterList';
 
 class Index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filter: 'All'
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event) {
+    this.setState({
+      filter: event.target.value
+    });
+  }
   render() {
     return (
       <div> 
@@ -17,7 +30,7 @@ class Index extends Component {
         <Nav />
         <Hero />
         <RecList drinks={this.props.drinks}/>
-        <GinList drinks={this.props.drinks}/>
+        <FilterList drinks={this.props.drinks} filter={this.state.filter} handleClick={this.handleClick}/>
       </div>
     )
   }
