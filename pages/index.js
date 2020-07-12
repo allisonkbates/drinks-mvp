@@ -3,6 +3,8 @@ import fetch from 'node-fetch';
 import Head from 'next/head';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
+import RecList from '../components/RecList';
+import GinList from '../components/GinList';
 
 class Index extends Component {
   render() {
@@ -14,6 +16,8 @@ class Index extends Component {
         </Head>
         <Nav />
         <Hero />
+        <RecList drinks={this.props.drinks}/>
+        <GinList drinks={this.props.drinks}/>
       </div>
     )
   }
