@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ListHeading from '../components/ListHeading';
-import ShortCard from '../components/ShortCard';
+import TallCard from '../components/TallCard';
 
 class RecList extends Component {
   render() {
@@ -8,7 +8,7 @@ class RecList extends Component {
     console.log(drinks);
     const showRecDrinks = drinks.map((drink) => {
       if (drink.fields.Recommended) {
-        return <ShortCard key={drink.id} drink={drink} />
+        return <TallCard key={drink.id} drink={drink} />
       } else {
         return null;
       }
