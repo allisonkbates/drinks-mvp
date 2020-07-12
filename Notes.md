@@ -7,6 +7,7 @@ I've kept the V1 Design of this project for posterity's sake, but the body style
 - [ ] Hero card copy to be pulled from Airtable based on flag
 - [ ] Update images/logos with attribution
 - [ ] Turn this List Components into a component that accepts props
+- [ ] Make cards into sliders
 
 ## Colors for Design V2
 - Light Gray/White Background: #EFF3F4;

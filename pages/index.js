@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
 import RecList from '../components/RecList';
+import GinList from '../components/GinList';
 import FilterList from '../components/FilterList';
 
 class Index extends Component {
@@ -26,10 +27,12 @@ class Index extends Component {
         <Head>
           <title>Drinks MVP</title>
           <link rel="icon" type="image/svg" sizes="32x32" href="/logo-color.svg"></link>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"></link>
         </Head>
         <Nav />
         <Hero />
         <RecList drinks={this.props.drinks}/>
+        <GinList drinks={this.props.drinks}/>
         <FilterList drinks={this.props.drinks} filter={this.state.filter} handleClick={this.handleClick}/>
       </div>
     )
