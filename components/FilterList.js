@@ -7,11 +7,10 @@ class FilterList extends Component {
   render() {
     const drinks = this.props.drinks;
     const filter = this.props.filter;
-    console.log(drinks);
     const showFilteredDrinks = drinks.map((drink) => {
       if (filter === "All") {
         return <ShortCard  key={drink.id} drink={drink} />
-      } else if (filter === drink.fields["alcohol-tag"]) {
+      } else if (tags !== null && tags.includes(filter)) {
         return <ShortCard key={drink.id} drink={drink} />
       } else {
         return null;

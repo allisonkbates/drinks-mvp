@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import ShortCard from './ShortCard';
+
+
 
 class TallCard extends Component {
   render() {
     const drink = this.props.drink;
     const drinkImageName = drink.fields["img-path"];
-    const drinkName = drink.fields["Cocktail Name"];
-    const drinkIngredients = drink.fields["ingredients-cms"]
+    const drinkName = drink.fields["drink-pretty-name"];
+    const drinkIngredients = drink.fields["ingredients-short"];
+    const drinkPrep = drink.fields["preparation"];
+    function createMarkup() {
+      return {__html: drinkPrep};
+    }
   return (
     <div className="card">
       <img src={`/${drinkImageName}.png`} height="194" width="210" className=""></img>
@@ -14,11 +21,7 @@ class TallCard extends Component {
         <h4>Ingredients</h4>
         <p>{drinkIngredients}</p>
         <h4>Preparation</h4>
-        <ol>
-          <li>Pour vodka and lime juice into a mug; add ice cubes and ginger beer.</li>
-          <li>Stir to combine.</li>
-          <li>Drop a lime wedge into the mug for garnish.</li>
-        </ol>
+        <ol dangerouslySetInnerHTML={createMarkup()}/>
       </div>
     <style jsx>{`
       .card {
@@ -57,13 +60,12 @@ class TallCard extends Component {
         color: #222222;
         margin: 0;
       }
-      li {
-        padding: 0px 0px 6px 0px;
-      }
 
     ol {
         margin: 0;
-        padding: 6px 20px;
+        padding: 6px 10px;
+        font-family: 'Oxygen', sans-serif;
+        font-size: 12px;
       }
     `}</style>
     </div>

@@ -5,9 +5,9 @@ import TallCard from '../components/TallCard';
 class RecList extends Component {
   render() {
     const drinks = this.props.drinks;
-    console.log(drinks);
     const showRecDrinks = drinks.map((drink) => {
-      if (drink.fields.Recommended) {
+      const tags = drink.fields.tags;
+      if (tags && tags.includes("daniel-recommends")) {
         return <TallCard key={drink.id} drink={drink} />
       } else {
         return null;

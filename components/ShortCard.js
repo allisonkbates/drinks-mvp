@@ -4,8 +4,8 @@ class ShortCard extends Component {
   render() {
     const drink = this.props.drink;
     const drinkImageName = drink.fields["img-path"];
-    const drinkName = drink.fields["Cocktail Name"];
-    const drinkIngredients = drink.fields["ingredients-cms"]
+    const drinkName = drink.fields["drink-pretty-name"];
+    const drinkIngredients = drink.fields["ingredients-short"];
   return (
     <div className="card">
       <img src={`/${drinkImageName}.png`} height="194" width="210" className=""></img>

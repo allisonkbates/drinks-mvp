@@ -11,8 +11,7 @@
     "next": "latest",
     "node-fetch": "^2.6.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-glider": "^2.0.1"
+    "react-dom": "^16.8.4"
   },
   "license": "ISC"
 }

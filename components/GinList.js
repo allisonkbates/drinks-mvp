@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Glider from 'glider-js';
-import ListHeading from '../components/ListHeading';
 import ShortCard from '../components/ShortCard';
 
 class GinList extends Component {
@@ -22,13 +21,15 @@ class GinList extends Component {
   
   render() {
     const drinks = this.props.drinks;
+    
     const showRecDrinks = drinks.map((drink) => {
-      if (drink.fields["alcohol-tag"] === "Gin") {
+      const tags = drink.fields.tags;
+     if (tags && tags.includes("gin")) {
         return <ShortCard key={drink.id} drink={drink} />
       } else {
         return null;
       }
-     });
+    });
     return (
       <div className="gin-list">
         <h2>Gin Cocktails</h2>
@@ -62,24 +63,3 @@ class GinList extends Component {
 }
 
 export default GinList;
-
-/*
-<div class="glider-contain">
-  <div class="glider">
-    <div>your content here</div>
-    <div>your content here</div>
-    <div>your content here</div>
-    <div>your content here</div>
-		<div>your content here</div>
-    <div>your content here</div>
-    <div>your content here</div>
-    <div>your content here</div>
-		<div>your content here</div>
-    <div>your content here</div>
-    <div>your content here</div>
-    <div>your content here</div>
-  </div>
-  <button aria-label="Previous" class="glider-prev">«</button>
-  <button aria-label="Next" class="glider-next">»</button>
-  <div role="tablist" class="dots"></div>
-</div>*/
