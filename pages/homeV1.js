@@ -7,7 +7,7 @@ import Filters from '../components/Filters';
 import Banner from '../components/Banner';
 
 class HomeV1 extends Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
     this.state = {
       filter: 'All'
@@ -19,7 +19,7 @@ class HomeV1 extends Component {
     this.setState({
       filter: event.target.value
     });
-  }
+  }*/
 
   render() {
     return (
@@ -30,16 +30,16 @@ class HomeV1 extends Component {
         </Head>
         <Banner />
         <Header />
-        <Filters handleClick={this.handleClick}/>
-        <DrinkList drinks={this.props.drinks} filter={this.state.filter}/>
+       {/* <Filters handleClick={this.handleClick}/>
+        <DrinkList drinks={this.props.drinks} filter={this.state.filter}/> */}
       </div>
     )
   }
 }
 
-export async function getStaticProps() {
+/*export async function getStaticProps() {
   const apiKey = process.env.API_KEY;
-  const res = await fetch(`https://api.airtable.com/v0/app53cV9D5L6e38bR/Drinks?view=V1-UI-View&api_key=${apiKey}`);
+  const res = await fetch(`https://api.airtable.com/v0/appAO4a1ExR0c5Upn/Drinks?maxRecords=100&view=Grid%20view&api_key=${apiKey}`);
   const json = await res.json()
 
   return {
@@ -47,6 +47,6 @@ export async function getStaticProps() {
       drinks: json.records,
     },
   }
-}
+}*/
 
 export default HomeV1;
