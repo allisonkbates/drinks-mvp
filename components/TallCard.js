@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import ShortCard from './ShortCard';
-
-
 
 class TallCard extends Component {
+  
   render() {
     const drink = this.props.drink;
     const drinkImageName = drink.fields["img-path"];
     const drinkName = drink.fields["drink-pretty-name"];
     const drinkIngredients = drink.fields["ingredients-short"];
-    const drinkPrep = drink.fields["preparation"];
-    function createMarkup() {
-      return {__html: drinkPrep};
-    }
+    const drinkPrep = (drink.fields["preparation"].split('\n'));
+    const preparation= drinkPrep.map((word) => {
+      return <li key={word}>{word}</li>;
+    });
+
   return (
     <div className="card">
       <img src={`/${drinkImageName}.png`} height="194" width="210" className=""></img>
@@ -21,7 +20,11 @@ class TallCard extends Component {
         <h4>Ingredients</h4>
         <p>{drinkIngredients}</p>
         <h4>Preparation</h4>
-        <ol dangerouslySetInnerHTML={createMarkup()}/>
+        <div>
+        <ol>
+          {preparation}
+        </ol>
+        </div>
       </div>
     <style jsx>{`
       .card {

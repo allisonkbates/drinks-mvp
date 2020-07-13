@@ -12,6 +12,7 @@ I've kept the V1 Design of this project for posterity's sake, but the body style
 - [ ] Optimize Images for performance
 - [ ] Better logging and error handling for fetching airtable data
 - [ ] Use sass instead of JSX
+- [ ] Add fallback image for cocktails
 
 ## New Features
 - [ ] For now, connect to Airtable of what we have in stock and check to see which cocktails have it.
