@@ -10,7 +10,7 @@ function Hero() {
       </div>
     <style jsx>{`
       .hero {
-        background: url('/hero-image-desktop.png');
+        background: url('/hero-image-desktop.jpg');
         background-position: center center;
         background-size: cover;
         height: 490px;
