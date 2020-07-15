@@ -24,7 +24,7 @@ class Index extends Component {
   }
   render() {
     return (
-      <div> 
+      <div>
         <Head>
           <title>Drinks MVP</title>
           <link rel="icon" type="image/svg" sizes="32x32" href="/logo-color.svg"></link>
