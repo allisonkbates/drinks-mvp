@@ -10,7 +10,7 @@ function Nav() {
           {/* <img src="/search.svg" height="30"></img> */}
           <input type="search" placeholder="Search"></input>
         </label>
-        <a href="https://airtable.com/shr3Qkn6shcPr8QbW" target="_blank">
+        <a href="https://airtable.com/shrD598BUY6GUrvFP" target="_blank">
           <div className="cta">Add Cocktail</div>
         </a>
       </div>
