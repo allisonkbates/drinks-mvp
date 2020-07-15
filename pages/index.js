@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import RecList from '../components/RecList';
 import GinList from '../components/GinList';
 import FilterList from '../components/FilterList';
+import Footer from '../components/Footer';
 
 class Index extends Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class Index extends Component {
         <RecList drinks={this.props.drinks}/>
         <GinList drinks={this.props.drinks}/>
         <FilterList drinks={this.props.drinks} filter={this.state.filter} handleClick={this.handleClick}/>
+        <Footer />
       </div>
     )
   }

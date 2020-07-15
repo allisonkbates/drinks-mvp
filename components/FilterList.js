@@ -8,9 +8,11 @@ class FilterList extends Component {
     const drinks = this.props.drinks;
     const filter = this.props.filter;
     const showFilteredDrinks = drinks.map((drink) => {
+      const tags = drink.fields.tags;
       if (filter === "All") {
         return <ShortCard  key={drink.id} drink={drink} />
-      } else if (tags !== null && tags.includes(filter)) {
+      } else if (tags && tags.includes(filter)) {
+        console.log({tags, filter});
         return <ShortCard key={drink.id} drink={drink} />
       } else {
         return null;

@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&family=Julius+Sans+One&family=Notable&family=Oxygen:wght@300;400;700&display=swap');
 
+$primary-color: #377084;
+$light-color: #EFF3F4; 
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #EFF3F4;
+  background-color: $light-color;
 }

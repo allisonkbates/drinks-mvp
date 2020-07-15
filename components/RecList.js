@@ -14,13 +14,17 @@ class RecList extends Component {
       }
      });
     return (
-      <div>
+      <div className="container">
         <ListHeading name="Our Recommendations" />
         <div className="drink-list">
           {showRecDrinks}
         </div>
         <style jsx>{`
+        .container {
+          margin: 30px 0px;
+        }
         .drink-list {
+          
           padding: 0px 80px;
           display: flex;
           flex-direction: row;
