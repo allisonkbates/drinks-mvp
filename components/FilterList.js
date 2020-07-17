@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ListHeading from './ListHeading';
 import ShortCard from './ShortCard';
 import Filters from './Filters';
 
@@ -21,7 +20,7 @@ class FilterList extends Component {
     return (
       <div>
         <div className="heading">
-          <ListHeading name="Filter By:" />
+          <h2>Filter By:</h2>
           <Filters handleClick={this.props.handleClick}/>
         </div>
         <div className="drink-list">
@@ -33,6 +32,12 @@ class FilterList extends Component {
           flex-direction: row;
           align-items: center;
           margin-top: 20px;
+        }
+        h2 {
+          font-family: 'Advent Pro', sans-serif;
+          font-size: 32px;
+          font-weight: 400;
+          margin: 16px 0px 16px 80px;
         }
         .drink-list {
           padding: 0px 80px;
