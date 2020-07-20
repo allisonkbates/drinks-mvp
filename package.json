@@ -1,6 +1,10 @@
 {
-  "name": "data-fetch",
+  "name": "drinks-mvp",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allisonkbates/drinks-mvp.git"
+},
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -10,8 +14,10 @@
     "glider-js": "^1.7.3",
     "next": "latest",
     "node-fetch": "^2.6.0",
+    "postcss-preset-env": "^6.7.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "tailwindcss": "^1.5.1"
   },
   "license": "ISC"
 }

@@ -1,3 +1,6 @@
+/* @tailwind base;
+@tailwind components; */
+
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&family=Julius+Sans+One&family=Notable&family=Oxygen:wght@300;400;700&display=swap');
 
 body {
@@ -5,3 +8,9 @@ body {
   padding: 0;
   background-color: #eff3f4;
 } 
+/*
+.btn-blue {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+@tailwind utilities;*/

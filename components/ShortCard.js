@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 
 class ShortCard extends Component {
   render() {
@@ -8,11 +9,15 @@ class ShortCard extends Component {
     const drinkIngredients = drink.fields["ingredients-short"];
   return (
     <div className="card">
-      <img src={`/${drinkImageName}.png`} height="194" width="210" className=""></img>
-      <div className="card-wrapper">
-        <h3>{drinkName}</h3>
-        <p>{drinkIngredients}</p>
-      </div>
+			<Link href={`/drinks/[id]`} as={`/drinks/${drink.id}`}>
+				<div className="clickable">
+				<img src={`/${drinkImageName}.png`} height="194" width="210"></img>
+				<div className="card-wrapper">
+					<h3>{drinkName}</h3>
+					<p>{drinkIngredients}</p>
+				</div>
+				</div>
+			</Link>
     <style jsx>{`
       .card {
         display: flex;
@@ -27,6 +32,9 @@ class ShortCard extends Component {
         margin: 0;
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
       }
+			.clickable {
+				cursor: pointer;
+			}
       h3 {
         font-family: 'Advent Pro', sans-serif;
         font-size: 16px;
