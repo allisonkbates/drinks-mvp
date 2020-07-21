@@ -26,7 +26,7 @@ class FilterList extends Component {
 		const isNull = (currentValue) => currentValue === null;
     let showDrinks;       
     if (filteredDrinks.every(isNull)) {
-      showDrinks = <h2 style={{color: "red"}}>Oops! We don't have any drinks. Add one here.</h2>
+      showDrinks = <h3 style={drinkListStyle}>Oops! We don't have any drinks. Add one here.</h3>
     } else {
       showDrinks = <div className="drink-list" style={drinkListStyle}>{filteredDrinks}</div>;
     }
@@ -35,8 +35,8 @@ class FilterList extends Component {
         <div className="heading">
           <h2>Filter By:</h2>
           <Filters handleClick={this.props.handleClick}/>
-					{showDrinks}
         </div>
+				{showDrinks}
       <style jsx>{`
         .heading {
           display: flex;
@@ -49,12 +49,6 @@ class FilterList extends Component {
           font-size: 32px;
           font-weight: 400;
           margin: 16px 0px 16px 80px;
-        }
-        .drink-list {
-          padding: 0px 80px;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
         }
       `}</style>
       </div>

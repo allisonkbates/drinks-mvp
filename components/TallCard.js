@@ -1,16 +1,38 @@
 import React, { Component } from 'react';
 
-class TallCard extends Component {
-	
+class TallCard extends Component {	
 	render() {
 		const drink = this.props.drink;
 		const drinkImageName = drink.fields["img-path"];
 		const drinkName = drink.fields["drink-pretty-name"];
 		const drinkIngredients = drink.fields["ingredients-short"];
-		const drinkPrep = (drink.fields["preparation"].split('\n'));
-		const preparation= drinkPrep.map((word) => {
-			return <li key={word}>{word}</li>;
-		});
+		const drinkPrep = drink.fields["preparation"];	
+		const prepListStyle = {
+			fontFamily: "'Oxygen', sans-serif",
+			fontSize: "12px",
+			fontWeight: "400",
+			color: "#222222",
+			margin: "0"
+		}
+		const orderedListStyle = {
+			margin: "0",
+			padding: "6px 10px",
+			fontFamily: "'Oxygen', sans-serif",
+			fontSize: "12px"
+		}
+		function formatPrep(drinkPrep) {
+			if (drinkPrep) {
+				const drinkPrepSplit = drinkPrep.split('\n');
+				return <ol style={orderedListStyle}>
+					{drinkPrepSplit.map((word) => {
+					return <li key={word} style={prepListStyle}>{word}</li>;
+				})}
+				</ol>
+			} else {
+				return <p>No preparation instructions available.</p>
+			}
+		}
+		const preparation = formatPrep(drinkPrep);	
 
 	return (
 		<div className="card">
@@ -21,9 +43,7 @@ class TallCard extends Component {
 				<p>{drinkIngredients}</p>
 				<h4>Preparation</h4>
 				<div>
-				<ol>
 					{preparation}
-				</ol>
 				</div>
 			</div>
 		<style jsx>{`
@@ -63,8 +83,7 @@ class TallCard extends Component {
 				color: #222222;
 				margin: 0;
 			}
-
-		ol {
+			ol {
 				margin: 0;
 				padding: 6px 10px;
 				font-family: 'Oxygen', sans-serif;
