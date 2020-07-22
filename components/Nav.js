@@ -3,7 +3,7 @@ function Nav() {
     <div className="nav">
       <div className="nav-left">
         <img src="/logo-color.svg" height="40"></img>
-        <h1>Your Fave Drinks</h1>
+        <h1>Your Fave Drinks!</h1>
       </div>
       <div className="nav-right">
         <label>
