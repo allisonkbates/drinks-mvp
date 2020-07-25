@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 function Nav() {
   return (
     <div className="nav">
@@ -10,9 +12,9 @@ function Nav() {
           {/* <img src="/search.svg" height="30"></img> */}
           <input type="search" placeholder="Search"></input>
         </label>
-        <a href="https://airtable.com/shrD598BUY6GUrvFP" target="_blank">
-          <div className="cta">Add Cocktail</div>
-        </a>
+        <Link href="/form">
+          <a className="cta">Add Cocktail</a>
+        </Link>
       </div>
       <style jsx>{`
         .nav {
