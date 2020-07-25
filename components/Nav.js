@@ -3,10 +3,12 @@ import Link from 'next/link';
 function Nav() {
   return (
     <div className="nav">
-      <div className="nav-left">
-        <img src="/logo-color.svg" height="40"></img>
-        <h1>Your Fave Drinks!</h1>
-      </div>
+      <Link href="/">
+        <div className="nav-left">
+          <img src="/logo-color.svg" height="40"></img>
+          <h1>Your Fave Drinks!</h1>
+        </div>
+      </Link>
       <div className="nav-right">
         <label>
           {/* <img src="/search.svg" height="30"></img> */}
@@ -27,6 +29,10 @@ function Nav() {
           align-items: center;
           margin: 0px 80px;
         }
+        .nav-left {
+          cursor: pointer;
+        }
+
         .nav-left, .nav-right {
           display: flex;
           flex-direction: row;

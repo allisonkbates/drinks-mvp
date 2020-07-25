@@ -1,9 +1,9 @@
-import TallCard from '../../../components/TallCard';
+import SingleDrink from '../../../components/SingleDrink';
 
 function Drink({ drink }) {
 	return (
 			<div>
-				<TallCard key={drink.id} drink={drink}/>
+				<SingleDrink key={drink.id} drink={drink}/>
 			</div>
 	)
 }

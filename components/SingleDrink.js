@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
-class TallCard extends Component {	
+class SingleDrink extends Component {	
 	render() {
 		const drink = this.props.drink;
 		const drinkImageName = drink.fields["img-path"];
 		const drinkName = drink.fields["cocktailName"];
-		const drinkIngredients = drink.fields["ingredients-short"];
-		const drinkPrep = drink.fields["preparation"];	
+		const drinkIngredients = drink.fields["ingredients"];
+    const drinkPrep = drink.fields["preparation"];
+    const drinkGlassware = drink.fields["glassware"];
+    const drinkTags = drink.fields['tags']
+    const drinkNotes = drink.fields['editorial-notes']
 		const prepListStyle = {
 			fontFamily: "'Oxygen', sans-serif",
 			fontSize: "12px",
@@ -19,13 +22,7 @@ class TallCard extends Component {
 			padding: "6px 10px",
 			fontFamily: "'Oxygen', sans-serif",
 			fontSize: "12px"
-    }
-    
-    function truncate(str) {
-      let truncated = str.substring(0, 200);
-      let formatted = truncated + '...';
-      return formatted;
-    }
+		}
 
     function formatIntoSteps(str) {
       const strSplit = str.split('\n');
@@ -37,22 +34,18 @@ class TallCard extends Component {
     }
 
 		function formatPrep(drinkPrep) {
-			if (drinkPrep && drinkPrep.length > 200) {
-        const formatted = truncate(drinkPrep);
-        const steps = formatIntoSteps(formatted);
-        return steps;
-      } if (drinkPrep) {
+     if (drinkPrep) {
         const steps = formatIntoSteps(drinkPrep);
         return steps;
 			} else {
 				return <p>No preparation instructions available.</p>
 			}
 		}
-		const preparation = formatPrep(drinkPrep);	
-
+    const preparation = formatPrep(drinkPrep);
+    
 	return (
 		<div className="card">
-			<img src={`/${drinkImageName}.png`} height="200" width="210" className=""></img>
+			<img src={`/${drinkImageName}.png`} height="194" width="210" className=""></img>
 			<div className="card-wrapper">
 				<h3>{drinkName}</h3>
 				<h4>Ingredients</h4>
@@ -61,18 +54,36 @@ class TallCard extends Component {
 				<div>
 					{preparation}
 				</div>
+        <div>
+          {drinkGlassware}
+        </div>
+        <div>
+          {drinkTags}
+        </div>
+        <div>
+          {drinkNotes}
+        </div>
 			</div>
 		<style jsx>{`
-			.card {
+			
+		`}</style>
+		</div>
+	)
+	}
+}
+
+export default SingleDrink;
+
+/*.card {
 				display: flex;
-        flex-grow: 1;
+				margin: 12px 12px 12px 0px;
 				flex-direction: column;
 				flex-wrap: nowrap;
 			} 
 			.card-wrapper {
 				background-color: #ffffff;
 				height: 250px;
-				width: 200px;
+				width: 170px;
 				margin: 0;
 				box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 				padding: 16px 20px;
@@ -104,11 +115,4 @@ class TallCard extends Component {
 				padding: 6px 10px;
 				font-family: 'Oxygen', sans-serif;
 				font-size: 12px;
-			}
-		`}</style>
-		</div>
-	)
-	}
-}
-
-export default TallCard;
+			}*/

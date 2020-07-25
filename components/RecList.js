@@ -28,11 +28,18 @@ class RecList extends Component {
     return (
       <div className="container">
         <h2>Our Recommendations</h2>
+        <div class="drinkContainer">
         {showDrinks}
+        </div>
         <style jsx>{`
         .container {
           margin: 30px 0px;
         }
+        .drinkContainer {
+          display: flex;
+          flex-grow: 1;
+        }
+
         h2 {
           font-family: 'Advent Pro', sans-serif;
           font-size: 32px;

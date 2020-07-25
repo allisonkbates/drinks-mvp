@@ -21,7 +21,6 @@ class ShortCard extends Component {
     <style jsx>{`
       .card {
         display: flex;
-        margin: 12px 12px 12px 0px;
         flex-direction: column;
         flex-wrap: nowrap;
       }

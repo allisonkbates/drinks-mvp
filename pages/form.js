@@ -55,7 +55,7 @@ class Form extends Component {
             <input type="text" name="ingredients" onChange={this.handleChange}></input>
             <label htmlFor="preparation">Tell us how to make your cocktali</label>
             <input type="text" name="preparation" onChange={this.handleChange}></input>
-            <label htmlFor="alcohol">Select the alcohol type:</label>
+            <label htmlFor="alcohol">Select the primary alcohol</label>
             <select id="alcohol" name="alcohol" onChange={this.handleChange}>
               <option value="vodka">Vodka</option>
               <option value="gin">Gin</option>
