@@ -4,7 +4,7 @@ class TallCard extends Component {
 	render() {
 		const drink = this.props.drink;
 		const drinkImageName = drink.fields["img-path"];
-		const drinkName = drink.fields["drink-pretty-name"];
+		const drinkName = drink.fields["cocktailName"];
 		const drinkIngredients = drink.fields["ingredients-short"];
 		const drinkPrep = drink.fields["preparation"];	
 		const prepListStyle = {

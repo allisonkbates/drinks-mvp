@@ -38,50 +38,7 @@ class Form extends Component {
       });
     console.log(res);
   }
-
-  /*handleSubmit(event) {
-    event.preventDefault();
-    try {
-      const res = fetch(`https://api.airtable.com/v0/appAO4a1ExR0c5Upn/Drinks?api_key=`, {
-        method: 'POST',
-        body: JSON.stringify(cocktail),
-        headers: { 'Content-Type': 'application/json' }
-      });
-
-      const json = res.json();
-
-      if (json.success) {
-        setResponse({
-          type: 'success',
-          message: 'Thank you for reaching out to us.'
-        });
-        console.log(response);
-        console.log(cocktail);
-      } else {
-        setResponse({
-          type: 'error',
-          message: json.message
-        });
-        console.log(response);
-        console.log(cocktail);
-      }
-    } catch (e) {
-      console.log('An error occurred', e);
-      setResponse({
-        type: 'error',
-        message: 'An error occured while submitting the form'
-      });
-      console.log(response);
-      console.log(cocktail);
-    }
-  };*/
-  
-  /* {
-  "fields": {
-    "drink-pretty-name": "Negroni",
-    "ingredients-short": "Gin, Campari & sweet vermouth"
-  }
- }*/render() {
+  render() {
     return (
       <div className="container">
         <Nav />
@@ -91,7 +48,7 @@ class Form extends Component {
         <div className="form-container">
           <h1>Add Your Favorite Cocktail</h1>
           <p>Tell us about your favorite cocktail & we'll add it to our database :) </p>
-          <form onSubmit={this.handleSubmit}> {/*action={`https://api.airtable.com/v0/appAO4a1ExR0c5Upn/Drinks?api_key=keyQQoRmHWp7ZAgP9`} method='post' onSubmit={handleSubmit}*/}
+          <form onSubmit={this.handleSubmit}> {/*action={`https://api.airtable.com/v0/appAO4a1ExR0c5Upn/Drinks?api_key=`} method='post' onSubmit={handleSubmit}*/}
             <label htmlFor="cocktailName">Cocktail Name</label>
             <input type="text" name="cocktailName" onChange={this.handleChange}></input>
             <label htmlFor="ingredients">What ingredients are in your cocktail?</label>
