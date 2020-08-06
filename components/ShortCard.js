@@ -23,6 +23,7 @@ class ShortCard extends Component {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        margin: 20px 20px;
       }
       .card-wrapper {
         background-color: #ffffff;
