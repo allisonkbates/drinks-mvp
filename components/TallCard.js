@@ -68,11 +68,12 @@ class TallCard extends Component {
         flex-grow: 1;
 				flex-direction: column;
 				flex-wrap: nowrap;
+        margin: 20px;
 			} 
 			.card-wrapper {
 				background-color: #ffffff;
 				height: 250px;
-				width: 200px;
+				width: 170px;
 				margin: 0;
 				box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 				padding: 16px 20px;
