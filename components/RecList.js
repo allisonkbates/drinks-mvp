@@ -28,7 +28,7 @@ class RecList extends Component {
     return (
       <div className="container">
         <h2>Our Recommendations</h2>
-        <div class="drinkContainer">
+        <div className="drinkContainer">
         {showDrinks}
         </div>
         <style jsx>{`
